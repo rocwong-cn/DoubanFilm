@@ -1,5 +1,5 @@
 .casts-container{
-    margin-top:40rpx;
+    margin:40rpx 0rpx;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     padding: 20rpx;

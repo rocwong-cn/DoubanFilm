@@ -4,11 +4,12 @@ var config = require('../../common/js/config');
 Page({
     data:{
         detail:{},
-        casts:[]
+        casts:[],
+        filmId:''
     },
-    onLoad:function(props){
+    loadData:function(){
+        var {filmId} = this.data;
         var that =this;
-        var filmId = props.filmId;
         var url = config.url_film_detail+filmId;
         http.get.call(that,url,{},true,function(res){
             console.log(res);
@@ -16,6 +17,15 @@ Page({
                 detail:res.data,
                 casts:res.data.directors.concat(res.data.casts)
             });
+            wx.stopPullDownRefresh();
         });
+    },
+    onLoad:function(props){
+        var filmId = props.filmId;
+        this.setData({filmId});
+        this.loadData();
+    },
+    onPullDownRefresh: function () {
+      this.loadData();
     }
 })

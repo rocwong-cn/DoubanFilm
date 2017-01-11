@@ -17,7 +17,15 @@ module.exports = {
                     "Content-Type": "application/json,application/json"
                 },
                 success: function (res) {
-                    !!successCb && successCb(res);
+                    if(res.statusCode===200){
+                        !!successCb && successCb(res);
+                    }else{
+                        message.show.call(that, {
+                            content: '服务器被怪兽吃掉啦',
+                            icon: 'warning',
+                            duration: 3000
+                        })
+                    }
                 },
                  fail: function () {
                      !!failCb && failCb();

@@ -10,7 +10,7 @@
 <template name="message">
 <block wx:if="{{visiable}}">
     <view class="message">
-        <image class="message-image" src="../../dist/images/weui-{{icon}}-icon.png"></image>
+        <image class="message-image" src="../../../images/weui-{{icon}}-icon.png"></image>
         <view class="message-content">{{content}}</view>
     </view>
 </block>

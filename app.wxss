@@ -1,0 +1,6 @@
+@import './common/style/animation.wxss';
+
+page {
+  font-family: "微软雅黑";
+  font-size: 28rpx;
+}

@@ -1,0 +1,22 @@
+<template name="filmItem">
+    <view class="item {{item.index==0?top-line:''}}">
+       <image class="cover" src="{{item.images.large}}"/>
+       <view class="item-right">
+       <view class="item-right-nav">
+            <text class="title">{{item.title}}</text>
+            <text class="score">{{item.rating.average}}分</text>
+        </view>
+        <view class="item-right-desc">
+            <view class="casts">主演：
+            <block wx:for="{{item.casts}}" wx:for-item="castItem" wx:key="cast">
+                {{castItem.name}}
+            </block>
+            </view>
+            <view class="item-right-nav">
+                <text class="watched align-end">已看人数：{{item.collect_count||0}}</text>
+                <text class="button">{{item.year==='2016'?'新片':item.year}}</text>
+            </view>
+        </view>
+       </view>
+    </view>
+</template>

@@ -1,0 +1,4 @@
+<import src="../../components/vendors/filmItem/filmItem" />
+<block wx:for="{{films}}">
+    <template is="filmItem" data="{{item}}" />
+</block>

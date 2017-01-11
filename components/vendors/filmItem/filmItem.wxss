@@ -1,0 +1,54 @@
+.item{
+    padding: 20rpx;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    animation: bounceIn 1s;
+}
+.item-right{
+    flex-direction: column;
+    display: flex;
+    box-sizing: border-box;
+    margin-left: 20rpx;
+    justify-content: space-between;
+     width: 100%;
+}
+.item-right-nav{
+    justify-content: space-between;
+    display: flex;
+}
+.item-right-desc{
+    flex-direction: column;
+    display: flex;
+}
+.cover{
+    width:120rpx;
+    height:160rpx;
+}
+.title{
+    font-size: 32rpx;
+    flex-wrap: wrap;
+}
+.watched{
+    color:#999;
+    margin-bottom: 10rpx;
+}
+.casts{
+    color:#999;
+}
+.score{
+    color:orange;
+    font-size: 28rpx;
+}
+.top-line{
+    border-top: 1px solid #ccc;
+}
+.button{
+    font-size: 24rpx;
+    border: 1px solid orange;
+    padding: 10rpx;
+    border-radius: 10rpx;
+    color: darkorange;
+}
+.align-end{
+    align-self: flex-end;
+}

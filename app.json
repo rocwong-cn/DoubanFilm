@@ -1,0 +1,32 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#47a86c",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "豆瓣电影",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#686868",
+    "selectedColor": "#47a86c",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "images/popular_icon.png",
+      "selectedIconPath": "images/popular_active_icon.png",
+      "text": "热映"
+    }, 
+    {
+      "pagePath": "pages/logs/logs",
+      "iconPath": "images/top_icon.png",
+      "selectedIconPath": "images/top_active_icon.png",
+      "text": "排行"
+    }],
+    "position":"bottom"
+  }
+}

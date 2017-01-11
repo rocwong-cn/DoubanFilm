@@ -1,0 +1,2 @@
+@import '../../components/vendors/filmDetail/filmDetail.wxss';
+@import '../../components/vendors/casts/casts.wxss';

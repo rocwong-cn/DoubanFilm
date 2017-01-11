@@ -1,8 +1,6 @@
 //index.js
 var http = require('../../utils/http');
 var config = require('../../common/js/config');
-//获取应用实例
-var app = getApp()
 Page({
   data: {
     showLoading: true,
@@ -19,7 +17,7 @@ Page({
        start: start,
        count: config.count
     };
-    http.post.call(that,config.url_films,data,hasMore,function(res){
+    http.get.call(that,config.url_films,data,hasMore,function(res){
       console.log(res);
       if(res && res.statusCode===200){
         if (res.data.subjects.length === 0) {
@@ -40,9 +38,6 @@ Page({
   onLoad: function () {
     this.loadData();
   },
-  onReady: function () {
-        // 页面渲染完成
-  },
   onShow: function () {
         // 页面显示
         // 使用竖向滚动时，需要给<scroll-view/>一个固定高度，通过 WXSS 设置 height。
@@ -55,17 +50,17 @@ Page({
             }
         })
     },
-    onHide: function () {
-        // 页面隐藏
-    },
-    onUnload: function () {
-        // 页面关闭
-    },
     onPullDownRefresh: function () {
       this.setData({start:0});
       this.loadData();
     },
     loadMoreHandle:function(){
       this.loadData();
+    },
+    filmItemTap:function(e){
+      var filmId = e.currentTarget.dataset.filmId;
+      wx.navigateTo({
+        url:'../film-detail/film-detail?filmId='+filmId
+      });
     }
 })

@@ -1,7 +1,7 @@
 var message = require('../components/widgets/message/message')
 
 module.exports = {
-    post:function(url,data,hasMore,successCb,failCb){
+    get:function(url,data,hasMore,successCb,failCb){
         if(hasMore){
         var that = this;
         wx.showToast({

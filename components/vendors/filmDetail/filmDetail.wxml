@@ -1,0 +1,40 @@
+<template name="filmDetail">
+<view class="top-block">
+    <view class="bg-img" style="background-image: url({{detail.images.large}})"></view>
+    <image class="cover" src="{{detail.images.large}}" />
+    <view class="top-block-right">
+        <view class="top-block-right-main">
+            <text class="title">{{detail.title}}</text>
+            <text class="sub-title" wx:if="{{detail.original_title}}">原名：{{detail.original_title}}</text>
+            </view>
+        <view class="top-block-right-detail">
+            <text class="fd-note">导演：<block wx:for="{{detail.directors}}" wx:for-item="director" wx:key="{{director.id}}">{{director.name}}</block>
+            </text>
+            <view class="rate">
+                <text class="rate-score">{{detail.rating.average}}分</text>
+                <text class="rate-count">（{{detail.ratings_count}}参与）</text>
+            </view>
+            <text class="fd-note">{{detail.genres}}</text>
+            <text class="fd-note">{{detail.countries}}/{{detail.durations||'时长未知'}}</text>
+            <text class="fd-note">{{detail.mainland_pubdate}}</text>
+        </view>
+    </view>
+</view>
+<view class="fence">
+    <view class="fence-item">
+        <text class="numbers">{{detail.wish_count}}人</text>
+        <text class="desc">想看</text>
+    </view>
+    <view class="fence-item">
+        <text  class="numbers">{{detail.collect_count}}人</text>
+        <text class="desc">看过</text>
+    </view>
+    <view class="fence-item">
+        <text class="numbers">{{detail.reviews_count}}条</text>
+        <text class="desc">影评</text>
+    </view>
+</view>
+<view class="summary">
+<text class="summary-text">简介：{{detail.summary}}</text>
+</view>
+</template>

@@ -1,0 +1,13 @@
+<template name="casts">
+<view class="casts-container">
+    <text>演职人员</text>
+    <scroll-view class="scoll-cast-view" scroll-x>
+    <view class="cast-list">
+        <view class="cast-item" wx:for="{{casts}}" wx:for-item="cast" wx:key="{{cast.id}}">
+            <image class='cast-image' src="{{cast.avatars.large}}"></image>
+            <text class="cast-name">{{cast.name}}</text>
+        </view>
+    </view>
+    </scroll-view>
+</view>
+</template>

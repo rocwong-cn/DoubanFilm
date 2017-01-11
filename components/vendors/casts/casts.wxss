@@ -1,0 +1,27 @@
+.casts-container{
+    margin-top:40rpx;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 20rpx;
+    background-color: rgba(0, 0, 0, 0.05)
+}
+.scoll-cast-view{
+    margin-top:20rpx;
+}
+.cast-list{
+    display: flex;
+    flex-direction: row;
+}
+.cast-image{
+    height: 300rpx;
+    width: 200rpx;
+}
+.cast-item{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20rpx;
+}
+.cast-name{
+    text-align: center;
+    margin-top: 20rpx;
+}

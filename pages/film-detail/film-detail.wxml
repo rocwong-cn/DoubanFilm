@@ -1,0 +1,6 @@
+<scroll-view scroll-y="true">
+    <import src='../../components/vendors/filmDetail/filmDetail' />
+    <template is='filmDetail' data='{{detail}}' />
+    <import src='../../components/vendors/casts/casts' />
+    <template is='casts' data='{{casts}}' />
+</scroll-view>

@@ -1,5 +1,5 @@
 <template name="filmItem">
-    <view class="item {{item.index==0?top-line:''}}">
+    <view bindtap="filmItemTap" data-film-id="{{item.id}}" class="item">
        <image class="cover" src="{{item.images.large}}"/>
        <view class="item-right">
        <view class="item-right-nav">

@@ -1,0 +1,93 @@
+.top-block{
+    padding: 20rpx;
+    display: flex;
+    flex-direction: row;
+}
+.bg-img{
+    padding:20rpx;
+     position: absolute;
+    z-index: -2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 400rpx;
+    background-size: cover;
+    background-position: center;
+    filter: blur(30rpx);
+}
+.cover{
+    width:200rpx;
+    height:300rpx;
+}
+.top-block-right{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20rpx;
+    justify-content: space-between;
+}
+.title{
+    color:white;
+    font-size:30rpx;
+    margin-bottom: 10rpx;
+}
+.sub-title{
+    color:white;
+    font-size: 22rpx;
+    margin-bottom: 10rpx;
+}
+.rate{
+    margin-bottom: 10rpx; 
+}
+.rate-score{
+    color:orange;
+    font-size: 26rpx;
+}
+.rate-count{
+    color: #aaa;
+    font-size: 18rpx;
+}
+.fd-note{
+    color: #aaa;
+    margin-bottom: 10rpx; 
+}
+.top-block-right-main{
+    display: flex;
+    flex-direction: column;
+}
+.top-block-right-detail{
+    display: flex;
+    flex-direction: column;
+}
+.fence{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.fence-item{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #aaa;
+    text-align: center;
+    height: 80rpx;
+    width: 160rpx;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    box-shadow: 10rpx 10rpx 5rpx #888888;
+}
+.numbers{
+    color:gold;
+    font-size: 22rpx;
+    margin-bottom: 10rpx;
+}
+.desc{
+    color:snow;
+}
+.summary{
+    padding: 0rpx 20rpx;
+    margin-top: 80rpx;
+}
+.summary-text{
+    line-height: 40rpx;
+}

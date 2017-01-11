@@ -1,4 +1,15 @@
 <import src="../../components/vendors/filmItem/filmItem" />
-<block wx:for="{{films}}">
-    <template is="filmItem" data="{{item}}" />
-</block>
+<scroll-view style="height: {{windowHeight}}rpx"  bindscrolltolower="loadMoreHandle" scroll-y="true">
+    <block wx:for="{{films}}" wx:key="films">
+        <template is="filmItem" data="{{item}}" />
+    </block>
+    <block wx:if="{{hasMore}}">
+        <view class="loading-tip">加载中…</view>
+    </block>
+    <block wx:else>
+        <view class="loading-tip">没有更多了</view>
+    </block>
+</scroll-view>
+<import src="../../components/widgets/message/message" />
+<template is="message" data="{{...message}}" />
+

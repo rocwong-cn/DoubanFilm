@@ -1,4 +1,5 @@
 @import './common/style/animation.wxss';
+@import './components/widgets/message/message.wxss';
 
 page {
   font-family: "微软雅黑";

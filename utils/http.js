@@ -1,7 +1,8 @@
 var message = require('../components/widgets/message/message')
 
 module.exports = {
-    post:function(url,data,successCb,failCb){
+    post:function(url,data,hasMore,successCb,failCb){
+        if(hasMore){
         var that = this;
         wx.showToast({
                 title: '玩命加载中...',
@@ -21,7 +22,7 @@ module.exports = {
                  fail: function () {
                      !!failCb && failCb();
                     message.show.call(that, {
-                        content: '网络开小差了',
+                        content: '网络不给力啊',
                         icon: 'warning',
                         duration: 3000
                     })
@@ -30,5 +31,6 @@ module.exports = {
                     wx.hideToast()
                 }
         });
+         }
     }
 }

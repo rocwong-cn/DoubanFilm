@@ -5,7 +5,6 @@
         icon 图标类型 三种值 info success warning
         content提示内容
     }
-
 -->
 <template name="message">
 <block wx:if="{{visiable}}">

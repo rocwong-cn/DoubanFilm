@@ -4,7 +4,7 @@
     "pages/logs/logs"
   ],
   "window":{
-    "backgroundTextStyle":"light",
+    "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#47a86c",
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "豆瓣电影",

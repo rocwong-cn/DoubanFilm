@@ -79,7 +79,7 @@
 .numbers{
     color:gold;
     font-size: 22rpx;
-    margin-bottom: 10rpx;
+    margin-bottom: 5rpx;
 }
 .desc{
     color:snow;

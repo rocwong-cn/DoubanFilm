@@ -3,4 +3,15 @@
     <template is='filmDetail' data='{{detail}}' />
     <import src='../../components/vendors/casts/casts' />
     <template is='casts' data='{{casts}}' />
+    <block wx:if="{{isPopoverShow}}">
+        <view class="mask" catchtap="togglePopover"></view>
+        <view class="popover" style="width:{{popoverWidth}}rpx;height:{{popoverHeight}}rpx;top:{{popoverTop}}rpx;left:{{popoverLeft}}rpx;">
+        <view class="celebrity">
+            <text class="cb-name">{{celebrity.name}}</text>
+            <text class="cb-name_en">{{celebrity.name_en}}</text>
+            <text class="cb-birth">{{celebrity.born_place}}</text>
+        </view>
+            <image class="cb-avatar" src="{{celebrity.avatars.small}}"></image>
+        </view>
+    </block>
 </scroll-view>

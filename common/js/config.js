@@ -3,5 +3,6 @@ module.exports = {
     city: '北京',
     count: 20,
     url_films:'https://api.douban.com/v2/movie/in_theaters',
-    url_film_detail:'https://api.douban.com/v2/movie/subject/'//后面需要跟上电影的id
+    url_film_detail:'https://api.douban.com/v2/movie/subject/',//后面需要跟上电影的id
+    url_celebrity_detail:'https://api.douban.com/v2/movie/celebrity/'//+演员id
 }

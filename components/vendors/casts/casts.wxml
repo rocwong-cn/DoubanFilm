@@ -3,9 +3,10 @@
     <text>演职人员</text>
     <scroll-view class="scoll-cast-view" scroll-x>
     <view class="cast-list">
-        <view class="cast-item" wx:for="{{casts}}" wx:for-item="cast" wx:key="{{cast.id}}">
-            <image class='cast-image' src="{{cast.avatars.large}}"></image>
-            <text class="cast-name">{{cast.name}}</text>
+        <view bindtap="celebrityTap" class="cast-item" wx:for="{{casts}}" wx:for-index="idx" wx:for-item="cast" wx:key="{{cast.id}}" data-celebrity-id="{{cast.id}}">
+            <image class='cast-image' src="{{cast.avatars.medium}}"></image>
+            <view class="cast-name">{{cast.name}}</view>
+            <text class="cast-name gray-text">{{idx===0?'（导演）':''}}</text>
         </view>
     </view>
     </scroll-view>

@@ -14,7 +14,7 @@
             </view>
             <view class="item-right-nav">
                 <text class="watched align-end">已看人数：{{item.collect_count||0}}</text>
-                <text class="button">{{item.year==='2016'?'新片':item.year}}</text>
+                <text class="button">{{item.year==='2017'?'新片':item.year}}</text>
             </view>
         </view>
        </view>

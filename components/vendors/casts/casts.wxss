@@ -25,3 +25,7 @@
     text-align: center;
     margin-top: 20rpx;
 }
+.gray-text{
+    color:#aaa;
+    font-size: 20rpx;
+}
